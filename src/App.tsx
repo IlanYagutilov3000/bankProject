@@ -1,24 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import State from './components/State';
+import Expenses from './components/Expenses';
 
 function App() {
+  let username: string = "Ilan Yagutilov"
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="imgPlusTextContainer">
+        {/* <img src="cashBackground.jpg" alt="background of cash for the bank" /> */}
+      </div>
+      {<h5 className='welcomeMessage bg-success-subtle' style={{ fontWeight: '100' }}>Welcome back <span style={{ fontWeight: '500' }}>{username}</span></h5>}
+      <State />
+      <Expenses />
     </div>
   );
 }
